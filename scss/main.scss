@@ -1001,6 +1001,31 @@ img, textarea, input, table {
                 padding: 10px 14px;
             }
         }
+        
+        .phone{
+            display: none !important;
+        }
+    }
+
+    .phone_mobile {
+        display: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 6px 20px;
+        margin: 0 -30px;
+        background: #676767;
+
+        @media all and (max-width: 1023px) {
+            display: block;
+        }
+
+        @media all and (max-width: 999px) {
+            margin: 0 -20px;
+        }
     }
 
     &.fixed {
@@ -1009,6 +1034,19 @@ img, textarea, input, table {
         @media all and (min-width: 1024px)  {
             .header_top {
                 display: none;
+            }
+        }
+
+        @media all and (min-width: 1024px) and (max-width: 1400px) {
+            .header_bottom {
+
+                .make_btn {
+                    display: none;
+                }
+
+                .phone {
+                    display: block !important;
+                }
             }
         }
 
@@ -1235,6 +1273,13 @@ img, textarea, input, table {
         background: #676767;
         border-radius: 2px;
         height: 1px;
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
     }
 }
 
